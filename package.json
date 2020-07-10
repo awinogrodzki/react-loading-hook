@@ -1,6 +1,6 @@
 {
   "name": "react-loading-hook",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Async loading and error state management hook for TypeScript and JavaScript React applications",
   "main": "dist/index.js",
   "scripts": {

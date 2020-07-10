@@ -1,8 +1,9 @@
 {
   "name": "react-loading-hook",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Async loading and error state management hook for TypeScript and JavaScript React applications",
   "main": "dist/index.js",
+  "repository": "https://github.com/awinogrodzki/react-loading-hook",
   "scripts": {
     "build": "tsc",
     "test": "jest --coverage"

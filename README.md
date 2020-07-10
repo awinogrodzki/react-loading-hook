@@ -31,6 +31,10 @@ function App() {
     }
   );
 
+  React.useEffect(() => {
+    fetchPerson();
+  }, []);
+
   if (isLoading) {
     return <span>Is loading...</span>;
   }

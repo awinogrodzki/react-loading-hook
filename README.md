@@ -24,7 +24,7 @@ function App() {
   const [person, setPerson] = React.useState();
   const [fetchPerson, isLoading, error, reset] = useLoadingCallback(
     async () => {
-      const response = fetch("https://swapi.dev/api/people/1");
+      const response = await fetch("https://swapi.dev/api/people/1");
       const person = await response.json();
 
       setPerson(person);

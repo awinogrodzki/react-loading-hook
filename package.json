@@ -1,0 +1,30 @@
+{
+  "name": "react-loading-hook",
+  "version": "0.0.1",
+  "description": "Async loading and error state management hook for TypeScript and JavaScript React applications",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --coverage"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^26.0.4",
+    "@types/node": "^14.0.5",
+    "@types/react": "^16.9.35",
+    "axios": "^0.19.2",
+    "jest": "^26.0.1",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
+    "ts-jest": "^26.0.0",
+    "typescript": "3.9.6"
+  },
+  "author": "Amadeusz Winogrodzki <amadeusz.winogrodzki@gmail.com>",
+  "license": "ISC"
+}

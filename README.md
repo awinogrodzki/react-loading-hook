@@ -2,7 +2,7 @@
 
 [![npm](https://img.shields.io/bundlephobia/minzip/react-loading-hook?style=for-the-badge)](https://bundlephobia.com/result?p=react-loading-hook)
 
-Easy asynchronous loading state management in React
+Async loading and error state management hook for TypeScript and JavaScript React applications
 
 ## Install
 

@@ -23,8 +23,8 @@ import { useLoadingCallback } from "react-loading-hook";
 export default function App() {
   const [person, setPerson] = React.useState();
   const [fetchPerson, isLoading, error, reset] = useLoadingCallback(
-    async () => {
-      const response = await fetch("https://swapi.dev/api/people/1/");
+    async (id) => {
+      const response = await fetch(`https://swapi.dev/api/people/${id}/`);
       const person = await response.json();
 
       setPerson(person);
@@ -32,7 +32,9 @@ export default function App() {
   );
 
   React.useEffect(() => {
-    fetchPerson();
+    const personId = 1;
+
+    fetchPerson(personId);
   }, []);
 
   if (error) {

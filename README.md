@@ -20,11 +20,11 @@ Please note that TypeScript type definition files are included.
 import React from "react";
 import { useLoadingCallback } from "react-loading-hook";
 
-function App() {
+export default function App() {
   const [person, setPerson] = React.useState();
   const [fetchPerson, isLoading, error, reset] = useLoadingCallback(
     async () => {
-      const response = await fetch("https://swapi.dev/api/people/1");
+      const response = await fetch("https://swapi.dev/api/people/1/");
       const person = await response.json();
 
       setPerson(person);
@@ -35,12 +35,12 @@ function App() {
     fetchPerson();
   }, []);
 
-  if (isLoading) {
-    return <span>Is loading...</span>;
+  if (error) {
+    return <span>{error.message}</span>;
   }
 
-  if (error) {
-    return <span>{error}</span>;
+  if (isLoading || !person) {
+    return <span>Is loading...</span>;
   }
 
   return <span>{person.name}</span>;

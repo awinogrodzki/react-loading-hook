@@ -1,6 +1,6 @@
 {
   "name": "react-loading-hook",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "Async loading and error state management hook for TypeScript and JavaScript React applications",
   "main": "lib/index.js",
   "files": [
@@ -21,8 +21,8 @@
     "typescript"
   ],
   "peerDependencies": {
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/react-hooks": "^3.2.1",
@@ -32,9 +32,9 @@
     "axios": "^0.19.2",
     "jest": "^26.0.1",
     "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-test-renderer": "^16.13.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-test-renderer": "^18.2.0",
     "ts-jest": "^26.0.0",
     "typescript": "3.9.6",
     "eslint": "^7.1.0",

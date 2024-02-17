@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 export type IsLoading = boolean;
 export type LoadingCallback<T extends (...args: any[]) => Promise<any>> = (
@@ -8,12 +8,13 @@ export type ResetFunc = () => void;
 export type AnyError = any;
 
 export const useLoadingCallback = <T extends (...args: any[]) => Promise<any>>(
-  callback: T
+  callback: T,
+  deps?: React.DependencyList
 ): [LoadingCallback<T>, IsLoading, AnyError | undefined, ResetFunc] => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<any | undefined>();
 
-  const handleCallback = async (...args: Parameters<T>) => {
+  const handleCallback = useCallback(async (...args: Parameters<T>) => {
     setError(undefined);
     setIsLoading(true);
 
@@ -26,12 +27,12 @@ export const useLoadingCallback = <T extends (...args: any[]) => Promise<any>>(
       setIsLoading(false);
       throw e;
     }
-  };
+  }, deps ? deps : [callback])
 
-  const reset = () => {
+  const reset = useCallback(() => {
     setIsLoading(false);
     setError(undefined);
-  };
+  }, []);
 
   return [handleCallback as LoadingCallback<T>, isLoading, error, reset];
 };
